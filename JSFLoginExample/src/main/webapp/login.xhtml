@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Login Page</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:panelGrid columns="4" layout="flex"
+                     columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4"
+                     contentStyleClass="p-align-baseline ui-fluid">
+            <p:outputLabel for="text1" value="Kullanıcı Adı"/>
+            <p:inputText id="text1" value="#{loginBean.kullaniciAdi}"/>
+
+            <p:outputLabel for="text2" value="Kullanıcı Şifre"/>
+            <p:password id="text2" value="#{loginBean.kullaniiciSifre}"/>
+        </p:panelGrid>
+        <p:commandButton value="Giriş" action="#{loginBean.userControl()}"></p:commandButton>
+    </h:form>
+</h:body>
+</html>
